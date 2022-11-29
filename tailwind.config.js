@@ -2,12 +2,16 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
+	content: [
+		"./src/app/**/*.{js,ts,jsx,tsx}",
+		"./src/pages/**/*.{js,ts,jsx,tsx}",
+		"./src/components/**/*.{js,ts,jsx,tsx}",
+	],
+	theme: {
 		extend: {
+			fontFamily: {
+				sans: ['var(--font-inter)']
+			},
 			colors: {
 				primary: colors.indigo,
 				secondary: colors.rose,
@@ -15,5 +19,5 @@ module.exports = {
 			},
 		},
 	},
-  plugins: [],
+	plugins: [],
 }
