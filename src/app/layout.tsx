@@ -1,10 +1,11 @@
-import { Inter } from '@next/font/google';
+import { Roboto } from '@next/font/google';
 
 import '@/styles/globals.css'
 
 
-const inter = Inter({
-  variable: '--font-inter',
+const roboto = Roboto({
+  weight: ["300", "400", "500"],
+  style: "normal"
 });
 
 export default function RootLayout({
@@ -13,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={roboto.className}>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
